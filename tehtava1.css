@@ -80,7 +80,7 @@ nav {
   padding: 14px 16px;
   text-decoration: none;
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   display: block;
 }
 
@@ -288,6 +288,67 @@ aside {
   width: 125px;
   cursor: pointer;
 }
+
+/* menu ----------------- */
+.menu-filter-title {
+  text-align: center;
+  font-family: defaultBold, sans-serif;
+  color: var(--green);
+  margin: 20px 0;
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0px;
+}
+.menu-item-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 3px solid var(--light-green);
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+}
+.menu-food-image {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  display: block;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.menu-food-title {
+  font-family: defaultBold, sans-serif;
+  color: var(--light-green);
+  margin-bottom: 10px;
+}
+.menu-ingredients {
+  color: var(--light);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+.menu-ingredients span {
+  font-weight: bold;
+  color: var(--light-green);
+}
+.add-to-cart-btn {
+  background-color: var(--green);
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--light);
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 10px;
+}
 /* Footer ----------------- */
 
 footer {
@@ -381,6 +442,10 @@ form {
   }
   .mini-nav-element {
     margin: 0 3px;
+  }
+  .menu-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
   }
 }
 
@@ -497,6 +562,12 @@ form {
     background-position: center;
     background-size: cover;
   }
+  .menu-container {
+    padding-right: 0;
+    padding-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 /* M -------------- */
@@ -518,6 +589,9 @@ form {
   .car-svg {
     height: 100px;
   }
+  .menu-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* XL -------------- */
@@ -538,6 +612,9 @@ form {
   .top-burger-section p {
     text-align: center;
     font-size: 1.5em;
+  }
+  .menu-container {
+    gap: 24px;
   }
 }
 
